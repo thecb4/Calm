@@ -46,8 +46,6 @@ extension Calm.Work {
       ]
 
       try Shell.swiftTest(arguments: arguments)
-      print("Hello World")
-      print("Goodbye World")
     }
   }
 
