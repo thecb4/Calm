@@ -1,6 +1,16 @@
 title: Calm Changelog
 logs:
 - version: unreleased
+  date: 2020-03-26T22:25:39.540102005Z
+  commit:
+    summary: Bump minor
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
   date: 2020-03-26T22:24:46.564162015Z
   commit:
     summary: Fix tests
