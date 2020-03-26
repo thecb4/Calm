@@ -1,6 +1,27 @@
 title: Calm Changelog
 logs:
 - version: unreleased
+  date: 2020-03-26T22:08:29.670706033Z
+  commit:
+    summary: Bump minor
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
+  date: 2020-03-26T22:07:32.731978058Z
+  commit:
+    summary: Fixed "filter warning"
+    added:
+    - Test to CalmTests
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
   date: 2020-03-26T21:54:02.084344029Z
   commit:
     summary: bump minor version
