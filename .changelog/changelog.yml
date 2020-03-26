@@ -1,0 +1,22 @@
+title: Calm Changelog
+logs:
+- version: unreleased
+  date: 2020-03-26T21:52:07.59859395Z
+  commit:
+    summary: Clean up calm.swift file
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
+  date: 2020-03-26T20:47:06.993612051Z
+  commit:
+    summary: Cleaned up calm.swift file (2)
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
