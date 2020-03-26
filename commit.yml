@@ -1,6 +1,7 @@
-summary: bump minor version
+summary: Fixed "filter warning"
 
-added: []
+added:
+  - Test to CalmTests
 changed: []
 deprecated: []
 removed: []
