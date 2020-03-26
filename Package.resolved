@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Path.swift",
+        "repositoryURL": "https://github.com/mxcl/Path.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "f062ed9ce3729fb3ba3f43573136d2a0e0c6d209",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "ShellKit",
+        "repositoryURL": "https://github.com/thecb4/ShellKit.git",
+        "state": {
+          "branch": "2630153a",
+          "revision": "2630153a9a4f567052b3fab6907946ddd94d65fa",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
+        "state": {
+          "branch": null,
+          "revision": "8d31a0905c346a45c87773ad50862b5b3df8dff6",
+          "version": "0.0.4"
+        }
+      },
+      {
+        "package": "Version",
+        "repositoryURL": "https://github.com/mxcl/Version.git",
+        "state": {
+          "branch": null,
+          "revision": "a94b48f36763c05629fc102837398505032dead9",
+          "version": "2.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
