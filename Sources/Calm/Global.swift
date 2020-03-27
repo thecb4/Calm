@@ -1,5 +1,7 @@
 //
 import Path
+@_exported import ShellKit
+@_exported import ArgumentParser
 
 let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
 
