@@ -1,9 +1,8 @@
-summary: Moved work out. Will treat it as default code to use on script.
+summary: Bump minor version
 
 added: []
 changed: []
 deprecated: []
-removed:
-  - work commands. Moving them to a script
+removed: []
 fixed: []
 security: []
