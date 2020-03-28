@@ -221,7 +221,7 @@ extension Calm.Flow {
       // var hexadecimalOutput: Bool
 
       @Argument(
-          help: "Feature name")
+        help: "Feature name")
       var name: String
     }
   }
@@ -244,16 +244,13 @@ extension Calm.Flow {
       // var hexadecimalOutput: Bool
 
       @Argument(
-          help: "Semantic Version")
+        help: "Semantic Version")
       var version: Version
     }
-
   }
 
   struct Work: ParsableCommand {
     static var configuration: CommandConfiguration = "Work"
-
-
   }
 }
 
@@ -267,7 +264,7 @@ extension Calm.Flow.Feature {
     var options: Calm.Flow.Feature.Options
 
     func run() throws {
-      //try Shell.git(arguments: ["checkout", "-b", "feature/MYFEATURE", "develop"])
+      // try Shell.git(arguments: ["checkout", "-b", "feature/MYFEATURE", "develop"])
       print("starting a feature named \(options.name)")
     }
   }
@@ -282,8 +279,8 @@ extension Calm.Flow.Feature {
 
     func run() throws {
       print("pull latest for feature: \(options.name) from origin")
-      //try Shell.git(arguments: ["checkout", "feature/MYFEATURE"])
-      //try Shell.git(arguments: ["pull", "--rebase", "origin", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["checkout", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["pull", "--rebase", "origin", "feature/MYFEATURE"])
     }
   }
 
@@ -297,9 +294,9 @@ extension Calm.Flow.Feature {
 
     func run() throws {
       print("finalize feature: \(options.name)")
-      //try Shell.git(arguments: ["checkout", "develop"])
-      //try Shell.git(arguments: ["merge", "--no-ff", "feature/MYFEATURE"])
-      //try Shell.git(arguments: ["branch", "-d", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["checkout", "develop"])
+      // try Shell.git(arguments: ["merge", "--no-ff", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["branch", "-d", "feature/MYFEATURE"])
     }
   }
 
@@ -313,8 +310,8 @@ extension Calm.Flow.Feature {
 
     func run() throws {
       print("publish feature: \(options.name)")
-      //try Shell.git(arguments: ["checkout", "feature/MYFEATURE"])
-      //try Shell.git(arguments: ["push", "origin", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["checkout", "feature/MYFEATURE"])
+      // try Shell.git(arguments: ["push", "origin", "feature/MYFEATURE"])
     }
   }
 }
@@ -329,7 +326,7 @@ extension Calm.Flow.Release {
     var options: Calm.Flow.Release.Options
 
     func run() throws {
-      //try Shell.git(arguments: ["checkout", "-b", "release/version", "develop"])
+      // try Shell.git(arguments: ["checkout", "-b", "release/version", "develop"])
       print("starting release: \(options.version)")
     }
   }
@@ -354,12 +351,12 @@ extension Calm.Flow.Release {
 
     func run() throws {
       print("finalize release: \(options.version)")
-      //try Shell.git(arguments: ["checkout", "master"])
-      //try Shell.git(arguments: ["merge", "--no-ff", "release/version"])
-      //try Shell.git(arguments: ["tag", "-a", "version"])
-      //try Shell.git(arguments: ["checkout", "develop"])
-      //try Shell.git(arguments: ["merge", "--no-ff", "release/version"])
-      //try Shell.git(arguments: ["branch", "-d", "release/version"])
+      // try Shell.git(arguments: ["checkout", "master"])
+      // try Shell.git(arguments: ["merge", "--no-ff", "release/version"])
+      // try Shell.git(arguments: ["tag", "-a", "version"])
+      // try Shell.git(arguments: ["checkout", "develop"])
+      // try Shell.git(arguments: ["merge", "--no-ff", "release/version"])
+      // try Shell.git(arguments: ["branch", "-d", "release/version"])
     }
   }
 
@@ -373,10 +370,10 @@ extension Calm.Flow.Release {
 
     func run() throws {
       print("publish release: \(options.version)")
-      //try Shell.git(arguments: ["checkout", "develop"])
-      //try Shell.git(arguments: ["push", "origin", "develop"])
-      //try Shell.git(arguments: ["push", "origin", "--tags"])
-      //try Shell.git(arguments: ["push", "origin", "master"])
+      // try Shell.git(arguments: ["checkout", "develop"])
+      // try Shell.git(arguments: ["push", "origin", "develop"])
+      // try Shell.git(arguments: ["push", "origin", "--tags"])
+      // try Shell.git(arguments: ["push", "origin", "master"])
     }
   }
 }
