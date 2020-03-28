@@ -14,9 +14,9 @@
         "package": "ShellKit",
         "repositoryURL": "https://github.com/thecb4/ShellKit.git",
         "state": {
-          "branch": "2630153a",
-          "revision": "2630153a9a4f567052b3fab6907946ddd94d65fa",
-          "version": null
+          "branch": null,
+          "revision": "06a60e5ac852ed87ea37c9a6228fcbf6c6676a19",
+          "version": "0.3.0"
         }
       },
       {
