@@ -54,7 +54,7 @@ if #available(macOS 10.13, *) {
 
   Calm.Shallow.configuration.subcommands += [Calm.Shallow.Test.self]
 
-  Calm.Flow.remote = "git@gitlab.com:thecb4/calm.git"
+  Calm.remote = "git@gitlab.com:thecb4/calm.git"
 
   let arguments = [
     "work", "local-integration"

@@ -4,19 +4,40 @@ import ShellKit
 import Version
 
 @available(macOS 10.13, *)
-extension Calm.Flow.Release {
+extension Calm {
+  public struct Release: ParsableCommand {
+    public static var configuration = CommandConfiguration(
+      abstract: "Manage git flow releases",
+      subcommands: [
+        Start.self,
+        Bump.self,
+        Publish.self,
+        Prepare.self,
+        Finish.self
+      ],
+      defaultSubcommand: Start.self
+    )
+
+    static var prefix: String = "release"
+
+    public init() {}
+  }
+}
+
+@available(macOS 10.13, *)
+extension Calm.Release {
   public struct Start: ParsableCommand {
     public static var configuration: CommandConfiguration = "Create a release branch"
 
     @Argument(
-      default: Version(Shell.git_current_branch.replacingOccurrences(of: "\(Calm.Flow.Release.prefix)/", with: "")),
+      default: Version(Shell.git_current_branch.replacingOccurrences(of: "\(Calm.Release.prefix)/", with: "")),
       help: "Release version"
     )
     var version: Version
 
     public func run() throws {
       print("starting release: \(version)")
-      try Shell.git(arguments: ["checkout", "-b", "\(Calm.Flow.Release.prefix)/\(version)", "develop"])
+      try Shell.git(arguments: ["checkout", "-b", "\(Calm.Release.prefix)/\(version)", "develop"])
     }
 
     public init() {}
@@ -54,7 +75,7 @@ extension Calm.Flow.Release {
       }
 
       print("next version is \(next)")
-      try Shell.git(arguments: ["checkout", "-b", "\(Calm.Flow.Release.prefix)/\(next)", "develop"])
+      try Shell.git(arguments: ["checkout", "-b", "\(Calm.Release.prefix)/\(next)", "develop"])
       try next.write(to: Version.path)
     }
 
@@ -88,7 +109,7 @@ extension Calm.Flow.Release {
     public static var configuration: CommandConfiguration = "Finalize a release branch"
 
     @Argument(
-      default: Version(Shell.git_current_branch.replacingOccurrences(of: "\(Calm.Flow.Release.prefix)/", with: "")),
+      default: Version(Shell.git_current_branch.replacingOccurrences(of: "\(Calm.Release.prefix)/", with: "")),
       help: "Release version"
     )
     var version: Version
@@ -97,11 +118,11 @@ extension Calm.Flow.Release {
       try ShellKit.validate(Shell.git_clean_branch, "Dirty branch! Clean it up")
       print("finalize release: \(version)")
       try Shell.git(arguments: ["checkout", "master"])
-      try Shell.git(arguments: ["merge", "--no-ff", "\(Calm.Flow.Release.prefix)/\(version)"])
+      try Shell.git(arguments: ["merge", "--no-ff", "\(Calm.Release.prefix)/\(version)"])
       try Shell.git(arguments: ["tag", "-a", "\(version)", "-m", "\"Release \(version)\""])
       try Shell.git(arguments: ["checkout", "develop"])
-      try Shell.git(arguments: ["merge", "--no-ff", "\(Calm.Flow.Release.prefix)/\(version)"])
-      try Shell.git(arguments: ["branch", "-d", "\(Calm.Flow.Release.prefix)/\(version)"])
+      try Shell.git(arguments: ["merge", "--no-ff", "\(Calm.Release.prefix)/\(version)"])
+      try Shell.git(arguments: ["branch", "-d", "\(Calm.Release.prefix)/\(version)"])
     }
 
     public init() {}
