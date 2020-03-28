@@ -13,8 +13,9 @@ extension Calm {
       print("flow init")
       try Shell.git(arguments: ["init"])
       try Shell.git(arguments: ["commit", "--allow-empty", "-m", "\"Initial commit\""])
-      try gitPreCommitShellScript.write(to: gitPreCommitHookPath)
-      try gitPreCommitHookPath.chmod(0o754)
+      try Calm.gitPreCommitShellScript.write(to: Calm.gitPreCommitHookPath)
+      try Calm.gitPreCommitHookPath.chmod(0o754)
+      try Calm.calmScript.write(to: Calm.calmScriptPath)
       try Shell.git(arguments: ["checkout", "-b", "develop", "master"])
       if let remote = Calm.remote {
         try Shell.git(arguments: ["remote", "add", "origin", remote])
