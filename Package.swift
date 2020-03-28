@@ -8,7 +8,6 @@ let package = Package(
   products: [
     // Products define the executables and libraries produced by a package, and make them visible to other packages.
     .library(name: "Calm", targets: ["Calm"]),
-    .executable(name: "calmX", targets: ["CalmX"])
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
@@ -22,10 +21,6 @@ let package = Package(
     .target(
       name: "Calm",
       dependencies: ["ArgumentParser", "Path", "Version", "ShellKit"]
-    ),
-    .target(
-      name: "CalmX",
-      dependencies: ["Calm"]
     ),
     .target(
       name: "TestHelpers",
