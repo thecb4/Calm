@@ -1,5 +1,5 @@
 //
-import Path
+@_exported import Path
 @_exported import ShellKit
 @_exported import ArgumentParser
 

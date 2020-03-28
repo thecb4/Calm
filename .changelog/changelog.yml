@@ -1,6 +1,16 @@
 title: Calm Changelog
 logs:
 - version: unreleased
+  date: 2020-03-28T11:19:18.384127974Z
+  commit:
+    summary: Vlidate work in xcode
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
   date: 2020-03-27T01:46:50.162219047Z
   commit:
     summary: Minor bump to release (0)
