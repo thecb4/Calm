@@ -6,7 +6,6 @@ import Version
 @available(macOS 10.13, *)
 extension Calm {
   public struct Init: ParsableCommand {
-
     public static var configuration: CommandConfiguration = "Initialize calmness"
 
     public func run() throws {
@@ -24,5 +23,4 @@ extension Calm {
 
     public init() {}
   }
-
 }
