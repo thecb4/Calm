@@ -1,9 +1,9 @@
 title: Calm Changelog
 logs:
-- version: unreleased
-  date: 2020-03-30T22:34:29.594764947Z
+- version: 0.9.0
+  date: 2020-03-31T21:29:07.553966999Z
   commit:
-    summary: Bumped swift tools version to 5.2
+    summary: swift tools 5.2
     added: []
     changed: []
     deprecated: []
