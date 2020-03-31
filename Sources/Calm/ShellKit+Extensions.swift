@@ -1,5 +1,5 @@
 //
-@_exported import ShellKit
+import ShellKit
 
 @available(macOS 10.13, *)
 extension Shell {

@@ -1,30 +1,32 @@
 //
-import ArgumentParser
+@_exported import Path
+@_exported import ShellKit
+@_exported import ArgumentParser
 
 @available(macOS 10.13, *)
 extension Calm {
   public struct Work: ParsableCommand {
     public static var configuration: CommandConfiguration = "Camly manage work flow"
-  //   public static var configuration = CommandConfiguration(
-  //     abstract: "Manage work flow",
-  //     subcommands: [
-  //       Hygene.self,
-  //       Test.self,
-  //       Save.self,
-  //       Documentation.self,
-  //       LocalIntegration.self,
-  //       ContinuousIntegration.self
-  //       // Finish.self
-  //     ],
-  //     defaultSubcommand: Hygene.self
-  //   )
-  // }
+    //   public static var configuration = CommandConfiguration(
+    //     abstract: "Manage work flow",
+    //     subcommands: [
+    //       Hygene.self,
+    //       Test.self,
+    //       Save.self,
+    //       Documentation.self,
+    //       LocalIntegration.self,
+    //       ContinuousIntegration.self
+    //       // Finish.self
+    //     ],
+    //     defaultSubcommand: Hygene.self
+    //   )
+    // }
 
-  public init(){}
-}
+    public init() {}
+  }
 
-// @available(macOS 10.13, *)
-// extension Calm.Work {
+  // @available(macOS 10.13, *)
+  // extension Calm.Work {
 //   struct Hygene: ParsableCommand {
 //     public static var configuration: CommandConfiguration = "Perform hygene activities on the project"
 

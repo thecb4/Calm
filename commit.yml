@@ -1,7 +1,7 @@
-summary: Move shellkit to semantic version instead of branch
+summary: Bump Version to 0.9.0
+
 added: []
-changed:
-  branch to .exact("0.3.0") for ShellKit
+changed: []
 deprecated: []
 removed: []
 fixed: []

@@ -1,6 +1,6 @@
 #!/usr/bin/swift sh
 
-import Calm // @thecb4 == 0.7.0
+import Calm // @thecb4 == 0.8.0
 
 @available(macOS 10.13, *)
 extension Calm.Work {
@@ -18,8 +18,8 @@ extension Calm.Work {
     public static var configuration: CommandConfiguration = "Run tests"
 
     public func run() throws {
-      try Shell.swiftTestGenerateLinuxMain(environment: env)
-      try Shell.swiftFormat(version: "5.1", environment: env)
+      try Shell.swiftTestGenerateLinuxMain(environment: Calm.env)
+      try Shell.swiftFormat(version: "5.1", environment: Calm.env)
 
       let arguments = [
         "--parallel",
@@ -60,23 +60,22 @@ extension Calm.Work {
   struct Integration: ParsableCommand {
     public static var configuration = "Perform integration"
 
-     @Flag(help: "Save on integration completion")
+    @Flag(help: "Save on integration completion")
     var save: Bool
 
     @Flag(help: "local integration")
     var local: Bool
 
     public func run() throws {
-
       if local {
         try Hygene.run()
       }
 
       try Test.run()
 
-      if save { 
-        try Save.run() 
-        }
+      if save {
+        try Save.run()
+      }
     }
   }
 
@@ -103,11 +102,10 @@ extension Calm.Work {
 }
 
 Calm.Work.configuration.subcommands += [
-  Hygene.self,
-  Test.self,
-  Save.self,
-  Documentation.self,
-
+  Calm.Work.Hygene.self,
+  Calm.Work.Test.self,
+  Calm.Work.Save.self,
+  Calm.Work.Integration.self
 ]
 
 if #available(macOS 10.13, *) {
