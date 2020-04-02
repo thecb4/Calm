@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -21,8 +21,10 @@ let package = Package(
     .target(
       name: "Calm",
       dependencies: [
-        .product(name: "ArgumentParser", package: "swift-argument-parser"),
-        .product(name: "Path", package: "Path.swift"),
+        "ArgumentParser",
+        "Path",
+        // .product(name: "ArgumentParser", package: "swift-argument-parser"),
+        // .product(name: "Path", package: "Path.swift"),
         "Version",
         "ShellKit"
       ]
@@ -30,8 +32,10 @@ let package = Package(
     .target(
       name: "TestHelpers",
       dependencies: [
-        .product(name: "ArgumentParser", package: "swift-argument-parser"),
-        .product(name: "Path", package: "Path.swift")
+        "ArgumentParser",
+        "Path"
+        // .product(name: "ArgumentParser", package: "swift-argument-parser"),
+        // .product(name: "Path", package: "Path.swift")
       ],
       path: "Tests/Helpers"
     ),
@@ -40,7 +44,8 @@ let package = Package(
       dependencies: [
         "Calm",
         "TestHelpers",
-        .product(name: "Path", package: "Path.swift")
+        "Path"
+        // .product(name: "Path", package: "Path.swift")
       ]
     )
   ]
