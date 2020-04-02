@@ -1,9 +1,9 @@
 title: Calm Changelog
 logs:
-- version: unreleased
-  date: 2020-04-02T00:02:43.320597052Z
+- version: 0.9.1
+  date: 2020-04-02T00:18:14.556547999Z
   commit:
-    summary: Downgrade from swift tools 5.2 to 5.1 to accomodate swift-sh
+    summary: downgrade swift tools
     added: []
     changed: []
     deprecated: []
